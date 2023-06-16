@@ -10,13 +10,11 @@ function App() {
   const [step, setStep] = useState(1);
 
   const handlePrevButton = () => {
-    if (step === 1) return;
-    setStep((prevState) => prevState - 1);
+    if (step > 1) setStep((prevState) => prevState - 1);
   };
 
   const handleNextButton = () => {
-    if (step === 3) return;
-    setStep((prevState) => prevState + 1);
+    if (step < 3) setStep((prevState) => prevState + 1);
   };
   return (
     <div className='steps'>
