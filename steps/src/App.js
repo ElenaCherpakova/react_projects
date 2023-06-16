@@ -18,9 +18,12 @@ function App() {
     if (step < 3) setStep((prevState) => prevState + 1);
   };
 
+  const handleOpenUp = () => {
+    return setIsOpen((prevState) => !prevState);
+  };
   return (
     <>
-      <button className='close' onClick={() => setIsOpen(!isOpen)}>
+      <button className='close' onClick={handleOpenUp}>
         &times;
       </button>
       {isOpen && (
