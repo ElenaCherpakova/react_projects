@@ -1,15 +1,18 @@
 import React from 'react';
 import Item from './Item';
-// import initialItems from './data';
 
-function PackingList({items}) {
+function PackingList({ items, onDeleteItem }) {
   return (
     <div className='list'>
-      <ul>
-        {items.map((item) => (
-          <Item key={item.id} item={item} />
-        ))}
-      </ul>
+      {items.length > 0 ? (
+        <ul>
+          {items.map((item) => (
+            <Item key={item.id} item={item} onDeleteItem={onDeleteItem} />
+          ))}
+        </ul>
+      ) : (
+        <p>No items found, please add some!</p>
+      )}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Item({ item }) {
+function Item({ item, onDeleteItem }) {
   return (
     <div>
       <li className='list-item'>
@@ -9,7 +9,7 @@ function Item({ item }) {
           {item.quantity}
           {item.description}
         </span>
-        <button>❌</button>
+        <button onClick={() => onDeleteItem(item.id)}>❌</button>
       </li>
     </div>
   );
