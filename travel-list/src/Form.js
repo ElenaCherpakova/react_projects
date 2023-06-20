@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function From() {
+function From({ onAddItems }) {
   const [description, setDescription] = useState('');
   const [quantity, setQuantity] = useState(1);
 
@@ -15,7 +15,7 @@ function From() {
     event.preventDefault();
     if (!description) return;
     const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
+    onAddItems(newItem);
     setDescription('');
     setQuantity(1);
   };

@@ -1,12 +1,12 @@
 import React from 'react';
 import Item from './Item';
-import initialItems from './data';
+// import initialItems from './data';
 
-function PackingList() {
+function PackingList({items}) {
   return (
     <div className='list'>
       <ul>
-        {initialItems.map((item) => (
+        {items.map((item) => (
           <Item key={item.id} item={item} />
         ))}
       </ul>
