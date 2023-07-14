@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from './Button';
 function Friend({ friend }) {
   return (
     <li>
@@ -18,7 +18,7 @@ function Friend({ friend }) {
       {friend.balance === 0 && (
         <p>You and {friend.name} and your friend even.</p>
       )}
-      <button className='button'>Select</button>
+      <Button>Select</Button>
     </li>
   );
 }
