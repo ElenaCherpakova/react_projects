@@ -10,7 +10,7 @@ function App() {
   const [selectedFriend, setSelectedFriend] = useState(null);
 
   const handleShowForm = () => {
-    setShowForm(!showForm);
+    setShowForm((prev) => !prev);
   };
 
   const handleAddFriend = (friend) => {
