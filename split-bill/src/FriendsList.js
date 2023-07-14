@@ -1,9 +1,7 @@
-import { initialFriends } from './data';
 import React from 'react';
 import Friend from './Friend';
 
-function FriendsList() {
-  const friends = initialFriends;
+function FriendsList({friends}) {
   console.log(friends);
   return (
     <ul>
