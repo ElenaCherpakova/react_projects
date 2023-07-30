@@ -26,7 +26,7 @@ function MovieDetails({ watched, selectedId, onCloseMovie, onAddWatched }) {
     Genre: genre,
   } = movie;
 
-  const handleAdd = () => {
+  function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
       title,
@@ -37,8 +37,8 @@ function MovieDetails({ watched, selectedId, onCloseMovie, onAddWatched }) {
       userRating: Number(userRating),
     };
     onAddWatched(newWatchedMovie);
-    onCloseMovie();
-  };
+    // onCloseMovie();
+  }
 
   useEffect(() => {
     function callback(e) {
