@@ -5,7 +5,7 @@ export function useMovies(query, callback) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  
+
   useEffect(() => {
     callback?.();
     const controller = new AbortController();
@@ -46,6 +46,6 @@ export function useMovies(query, callback) {
     return () => {
       controller.abort();
     };
-  }, [query]);
+  }, [query, callback]);
   return { movies, isLoading, error };
 }
