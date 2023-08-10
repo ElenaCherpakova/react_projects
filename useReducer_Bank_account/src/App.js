@@ -119,7 +119,11 @@ export default function App() {
         <button
           onClick={() => dispatch({ type: 'close' })}
           disabled={
-            isActive ? (loan || balance < 0 ? true : false) : !isActive
+            isActive
+              ? loan || balance < 0 || balance > 0
+                ? true
+                : false
+              : !isActive
           }>
           Close account
         </button>
