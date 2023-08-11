@@ -29,27 +29,27 @@ const reducer = (state, action) => {
     case 'openAccount': {
       return {
         ...state,
-        balance: state.balance + 500,
-        isActive: state.isActive ? !state.isActive : { ...initialState },
+        balance: 500,
+        isActive: true,
       };
     }
     case 'deposit': {
       return {
         ...state,
-        balance: state.balance + 150,
+        balance: state.balance + action.payload,
       };
     }
     case 'withdraw': {
       return {
         ...state,
-        balance: state.balance - 50,
+        balance: state.balance - action.payload,
       };
     }
     case 'requestLoan': {
       return {
         ...state,
-        loan: !state.loan ? state.loan + 5000 : state.loan,
-        balance: state.balance + 5000,
+        loan: state.loan === 0 ? state.loan + action.payload : state.loan,
+        balance: state.balance + action.payload,
       };
     }
     case 'payLoan': {
@@ -89,29 +89,29 @@ export default function App() {
       </p>
       <p>
         <button
-          onClick={() => dispatch({ type: 'deposit' })}
+          onClick={() => dispatch({ type: 'deposit', payload: 150 })}
           disabled={!isActive ? true : false}>
           Deposit 150
         </button>
       </p>
       <p>
         <button
-          onClick={() => dispatch({ type: 'withdraw' })}
+          onClick={() => dispatch({ type: 'withdraw', payload: 50 })}
           disabled={balance <= 0 ? true : false}>
           Withdraw 50
         </button>
       </p>
       <p>
         <button
-          onClick={() => dispatch({ type: 'requestLoan' })}
+          onClick={() => dispatch({ type: 'requestLoan', payload: 5000 })}
           disabled={isActive ? (loan ? true : false) : !isActive}>
           Request a loan of 5000
         </button>
       </p>
       <p>
         <button
-          onClick={() => dispatch({ type: 'payLoan' })}
-          disabled={!loan ? true : false}>
+          onClick={() => dispatch({ type: 'payLoan', payload: 5000 })}
+          disabled={loan ? false : true}>
           Pay loan
         </button>
       </p>
