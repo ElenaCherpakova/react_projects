@@ -41,6 +41,7 @@ const reducer = (state, action) => {
       };
     }
     case 'withdraw': {
+      if (state.balance <= 0) return state;
       return {
         ...state,
         balance: state.balance - action.payload,
