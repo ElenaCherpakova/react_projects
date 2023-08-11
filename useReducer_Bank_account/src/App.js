@@ -56,7 +56,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         balance: state.balance - state.loan,
-        loan: state.loan ? state.loan - 5000 : state.loan,
+        loan: state.loan ? state.loan - action.payload : state.loan,
       };
     }
     case 'close': {
