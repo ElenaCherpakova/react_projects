@@ -62,7 +62,8 @@ const reducer = (state, action) => {
       };
     }
     case 'close': {
-      return { ...initialState };
+      if (state.loan > 0 || state.balance !== 0) return state;
+      return initialState;
     }
 
     default:
@@ -99,7 +100,7 @@ export default function App() {
       <p>
         <button
           onClick={() => dispatch({ type: 'withdraw', payload: 50 })}
-          disabled={isActive ? (balance <= 0 ? true : false) : !isActive}>
+          disabled={!isActive || balance <= 0}>
           Withdraw 50
         </button>
       </p>
@@ -120,13 +121,7 @@ export default function App() {
       <p>
         <button
           onClick={() => dispatch({ type: 'close' })}
-          disabled={
-            isActive
-              ? loan || balance < 0 || balance > 0
-                ? true
-                : false
-              : !isActive
-          }>
+          disabled={!isActive || loan > 0 || balance !== 0}>
           Close account
         </button>
       </p>
