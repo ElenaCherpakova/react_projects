@@ -4,7 +4,6 @@ import styles from './Sidebar.module.css';
 import Logo from './Logo';
 import AppNav from './AppNav';
 
-
 function Sidebar() {
   return (
     <div className={styles.sidebar}>
