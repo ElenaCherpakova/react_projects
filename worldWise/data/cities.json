@@ -1,30 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
       "cityName": "Berlin",
       "country": "Germany",
       "emoji": "🇩🇪",
@@ -35,6 +11,54 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Madrid",
+      "countryName": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T02:04:03.711Z",
+      "notes": "",
+      "position": {
+        "lat": "40.413496049701955",
+        "lng": "-3.7463378906250004"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Medina de Rioseco",
+      "countryName": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T02:05:04.832Z",
+      "notes": "",
+      "position": {
+        "lat": "41.902277040963696",
+        "lng": "-5.031738281250001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Tomelloso",
+      "countryName": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T02:05:23.754Z",
+      "notes": "",
+      "position": {
+        "lat": "39.11301365149975",
+        "lng": "-2.9443359375"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Madrid",
+      "countryName": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-09-14T02:07:26.653Z",
+      "notes": "",
+      "position": {
+        "lat": "40.36328834091583",
+        "lng": "-3.3398437500000004"
+      },
+      "id": 98443201
     }
   ]
 }
