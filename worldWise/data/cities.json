@@ -35,42 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
-    },
-    {
-      "cityName": "Moscow",
-      "country": "Russia",
-      "emoji": "🇷🇺",
-      "date": "2027-02-14T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 55.751244,
-        "lng": 37.618423
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Andorra la Vella",
-      "countryName": "Andorra",
-      "emoji": "🇦🇩",
-      "date": "2023-09-12T02:14:07.407Z",
-      "notes": "",
-      "position": {
-        "lat": "42.50450285299051",
-        "lng": "1.5161132812500002"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Meknes",
-      "countryName": "Morocco",
-      "emoji": "🇲🇦",
-      "date": "2023-09-12T02:17:02.211Z",
-      "notes": "",
-      "position": {
-        "lat": "33.87041555094183",
-        "lng": "-5.537109375000001"
-      },
-      "id": 98443200
     }
   ]
 }
