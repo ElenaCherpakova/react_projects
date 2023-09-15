@@ -25,13 +25,12 @@ function reducer(state, action) {
       throw new Error('Invalid action type');
   }
 }
-
 const FAKE_USER = {
-  name: 'Jack',
-  email: 'jack@example.com',
-  password: 'qwerty',
-  avatar: 'https://i.pravatar.cc/100?u=zz',
-};
+    name: 'Jack',
+    email: 'jack@example.com',
+    password: 'qwerty',
+    avatar: 'https://i.pravatar.cc/100?u=zz',
+  };
 
 function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
